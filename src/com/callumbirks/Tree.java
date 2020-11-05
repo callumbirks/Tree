@@ -68,7 +68,7 @@ public class Tree<T> {
 
     /**
      * A function which simply checks whether the current node has any child nodes,
-     * by checking whether the <tt>mChildren</tt> variable is null.
+     * by checking whether the <tt>mChildren</tt> list is empty.
      * @return A boolean that is true if the current node has children, otherwise false.
      */
     public boolean hasChildren() {
