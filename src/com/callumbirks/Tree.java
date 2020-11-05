@@ -10,6 +10,9 @@ import java.util.Objects;
  * The tree has one field of generic type T, and
  * another private variable which stores an <tt>ArrayList</tt>
  * of its children, each element being of type Tree<T>.
+ *
+ * @author callumbirks
+ *
  * @param <T> The generic type T which determines the
  *           type of the <tt>mField</tt> variable.
  */
@@ -154,7 +157,8 @@ public class Tree<T> {
      * @param index The index of the child you wish to remove from
      *              the <tt>mChildren</tt> list of the current node
      * @return The child of type Tree<T> which has been removed from the node
-     * @throws IndexOutOfBoundsException
+     * @throws IndexOutOfBoundsException The {@link ArrayList#remove(int) ArrayList(int index)} method will throw this exception if the
+     * index provided is out of the bounds of the array, and so this function will also throw the same exception if this occurs.
      */
     public Tree<T> removeChild(int index) throws IndexOutOfBoundsException {
         return mChildren.remove(index);
