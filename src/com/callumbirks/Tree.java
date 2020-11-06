@@ -21,12 +21,12 @@ public class Tree<T> {
      * The single field variable of each node on the tree,
      * of type T.
      */
-    private T mField;
+    protected T mField;
     /**
      * The list which stores all of the current node's children,
      * populated using an <tt>ArrayList</tt>. Each child is of type <tt>Tree<T></tt>.
      */
-    private List<Tree<T>> mChildren;
+    protected List<Tree<T>> mChildren;
 
     /**
      * Default constructor.
