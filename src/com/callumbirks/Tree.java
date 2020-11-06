@@ -157,6 +157,16 @@ public class Tree<T> {
     }
 
     /**
+     * Find out if a node with an <tt>mField</tt> variable of the given
+     * value exists in the tree.
+     * @param searchValue The <tt>mField</tt> value to search for in the tree.
+     * @return true if the given value exists in the tree, otherwise false.
+     */
+    public boolean nodeExists(T searchValue) {
+        return searchNode(searchValue) != null;
+    }
+
+    /**
      * Removes a child from the current node at the given index.
      * @param index The index of the child you wish to remove from
      *              the <tt>mChildren</tt> list of the current node
