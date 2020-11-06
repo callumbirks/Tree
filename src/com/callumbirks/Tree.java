@@ -140,10 +140,14 @@ public class Tree<T> {
     public Tree<T> searchNode(T searchValue) {
         Tree<T> locatedNode = null;
 
-        if(this.getField().equals(searchValue))
-            locatedNode = this;
+        if(this.getField() != null) {
+            if (this.getField().equals(searchValue))
+                locatedNode = this;
+        }
 
         for(Tree<T> c : mChildren) {
+            if(locatedNode != null) //To stop the loop once the node has been found
+                break;
             if(c.getField().equals(searchValue))
                 return c;
             else
